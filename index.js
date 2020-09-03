@@ -66,7 +66,7 @@ class Schema {
   enum          = (...enums) => this.setProperties("enum", enums);
   reg           = (regexp) => {
     if(!_.isRegExp(regexp)) throw new Error("schema.reg is not RegExp")
-    var type    = "regexp"
+    var type    = "string"
     var pattern = regexp.toString().replace(/((^\/)|(\/([ig]*))$)/ig, "");
     this.setProperties("type", type);
     return this.setProperties("pattern", pattern);
