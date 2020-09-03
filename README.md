@@ -20,6 +20,35 @@ var schema = new Schema("common.js", "base schema")
 
 
 console.log(schema)
+
+```
+
+```json5
+
+{
+  '$id': 'common.js',
+  '$schema': 'http://json-schema.org/draft-007/schema',
+  title: 'base schema',
+  body: {
+    username: { type: 'regexp', pattern: '^\\d+$', errorMessage: 'abc' },
+    id: { type: 'string', errorMessage: 'abc' },
+    required: [ 'body', 'bbc' ]
+  },
+  query: {
+    email: {
+      type: 'regexp',
+      pattern: '^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$',
+      errorMessage: 'message'
+    }
+  },
+  headers: {
+    string: { type: 'string', errorMessage: 'abc' },
+    boolean: { type: 'boolean', errorMessage: 'abc' },
+    enum: { type: 'string', enum: [], errorMessage: 'abc' },
+    required: [ 'body', 'bbc' ]
+  }
+}
+
 ```
 
 
