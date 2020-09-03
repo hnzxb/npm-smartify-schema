@@ -1,12 +1,4 @@
-# smartify-schema
-
-JsonSchema for Fastify
-
-## Useage
-```javascript
-
-var Schema = require("smartify-schema");
-
+var Schema = require("./index");
 var schema = new Schema("common.js", "base schema")
 .body("username").reg(/^\d+$/ig).error("abc")
 .query("email").email().error("message")
@@ -18,8 +10,4 @@ var schema = new Schema("common.js", "base schema")
 .requiredHeaders("body", "bbc")
 .value()
 
-
 console.log(schema)
-```
-
-
